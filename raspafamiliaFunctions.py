@@ -66,12 +66,11 @@ def setParamsEstados(ano, siglaEstado, pagina=1):
     siglaEstado = siglaEstado # exemplo: AC, MG, RR etc
     valorEstado = getEstado(siglaEstado)
     queryParams = {
-    		'Exercicio': '%d' % ano,
-    		'valorEstado': '%d' % valorEstado[2],
+            'Exercicio': '%d' % ano,
+            'valorEstado': '%d' % valorEstado[2],
             'codigoEstado': '%d' % valorEstado[1],
             'nomeEstado': '%s' % valorEstado[0],
             'valoracao': '1054629150000',
-#            'NomeAcao': 'Transferência de Renda Diretamente às Famílias em Condição de Pobreza e Extrema Pobreza Lei nº 10836 de 2004',
             'paramValor': '19061311479771',
             'codigoFuncao': '08',
             'siglaEstado': siglaEstado,
@@ -99,16 +98,15 @@ def setParamsMunicipios(ano, nomeMunicipio, municipios, pagina=1):
     paramsReversed = urlparse.parse_qsl(params)
     paramsDict = dict(paramsReversed)
     queryParams = {
-    		'Exercicio': '%d' % ano,
+            'Exercicio': '%d' % ano,
             'siglaEstado': paramsDict['siglaEstado'],
             'nomeEstado': '%s' % paramsDict['nomeEstado'],
-    		'valorEstado': '%s' % paramsDict['valorEstado'],
+            'valorEstado': '%s' % paramsDict['valorEstado'],
             'codigoEstado': '%s' % paramsDict['codigoEstado'],
             'nomeMunicipio': '%s' % paramsDict['nomeMunicipio'],
             'valorMunicipio': '%s' % paramsDict['valorMunicipio'],
             'codigoMunicipio': '%s' % paramsDict['codigoMunicipio'],
             'valoracao': '1054629150000',
-#            'NomeAcao': 'Transferência de Renda Diretamente às Famílias em Condição de Pobreza e Extrema Pobreza Lei n 10836 de 2004',
             'paramValor': '19061311479771',
             'codigoFuncao': '08',
             'codigoAcao': '8442',
@@ -232,16 +230,16 @@ def changePage(params):
     
     returns: string, encodada para ser usada por browsers
     '''
-    # urlparse does the job of reversing the encoded url
+    # urlparse desencoda a url
     paramsReversed = urlparse.parse_qsl(params)
-    # Then, paramsReversed is converted to a dictionary
+    # daí, paramsReversed é convertido num dicionário
     paramsDict = dict(paramsReversed)
-    # The 'Pagina' value is converted to an integer
+    # O valor 'Pagina' é convertido num inteiro
     paramsDict['Pagina'] = int(paramsDict['Pagina'])
-    # And incremented by 1
+    # e incrementado por 1
     paramsDict['Pagina'] += 1
-    # The new parameters are encoded back to be used
-    # by the browser.
+    # Os novos parâmetros são encodados de volta
+    # para serem usados pelo browser.
     newParams = urllib.urlencode(paramsDict)
 
     return newParams
