@@ -1,6 +1,6 @@
 raspafamilia
 ============
-Raspador de dados do Portal da Transparência dos dados do programa Bolsa Família do governo federal Brasileiro
+Raspador de dados do Portal da Transparência dos dados do programa Bolsa Família do governo federal Brasileiro, também conhecido como "eu quero uma API para acessar o Portal da Transparência"
 
 Introdução
 ---
