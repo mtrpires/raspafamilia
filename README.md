@@ -36,6 +36,6 @@ Melhorias/To do
 
 Disclaimer
 ---
-Fiz esse raspador em algumas horas, por diversão, aprendizado e para ajudar amigos, sem a qualquer pretenção de fazer um trabalho brilhante. Sei que o melhor a se fazer é baixar a base de dados completa e acessá-la localmente utilizando um servidor SQL. 
+Fiz esse raspador em algumas horas, por diversão, aprendizado e para ajudar amigos, sem a qualquer pretensão de fazer um trabalho brilhante. Sei que o melhor a se fazer é baixar a base de dados completa e acessá-la localmente utilizando um servidor SQL. 
 
 Além disso, sou jornalista de formação e aprendi a programar sozinho. Apesar de sempre procurar escrever da forma mais clara e procurar as rotinas menos burocráticas, é certo que você encontrará soluções desengonçadas e grosseiras (como urllib, por exemplo). Toda e qualquer crítica construtiva é bem-vinda.
